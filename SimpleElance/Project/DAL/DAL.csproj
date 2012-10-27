@@ -44,14 +44,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ProjectEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>ProjectEntities.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+  </ItemGroup>
+  <ItemGroup>
     <EntityDeploy Include="ProjectEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ProjectEntities.Designer.cs</LastGenOutput>
