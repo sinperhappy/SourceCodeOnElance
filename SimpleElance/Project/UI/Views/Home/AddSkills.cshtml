@@ -1,0 +1,157 @@
+﻿@model UI.ViewModels.SkillsModel
+
+@{
+    ViewBag.Title = Internationalization.Resources.CreateSkills;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Internationalization.Resources.CreateSkillsInfo1</h2>
+<p>@Internationalization.Resources.CreateSkillsInfo2</p>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/ajaxfileupload.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/globalize.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>@Internationalization.Resources.SkillsExperience</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PhotoPath)
+        </div>
+        <div class="editor-field">
+            @{
+                string temp = "";
+                if (Model != null)
+                {
+                    temp = String.Format("~/Temp/{0}", Model.PhotoPath);
+                    temp = Url.Content(temp);
+                }
+                
+                <input type="image" alt="" id="UserPhoto" src="@temp"/>
+            }
+            <br />
+            <input id="fileToUpload" type="file" size="45" name="fileToUpload" value="Browse" />
+            <input id="buttonUpload" type="button" onclick="return ajaxFileUpload();" value="@Internationalization.Resources.Upload" />
+            <input id="loading" type="image" src="@Url.Content("~/Content/loading.gif")" style="display: none;"  />
+            @{
+                string name = "";
+                if (Model != null)
+                {
+                    name = Model.PhotoPath;
+                }
+                <input id="PhotoPathHidden" type="hidden" name="PhotoPathHidden" value="@name" />
+            }
+
+            @Html.ValidationMessageFor(model => model.PhotoPath)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TagLine)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TagLine, new { maxlength = "50" })
+            @Html.ValidationMessageFor(model => model.TagLine)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MyRate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MyRate)
+            @Html.ValidationMessageFor(model => model.MyRate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SystemRate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SystemRate)
+            @Html.ValidationMessageFor(model => model.SystemRate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OverView)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.OverView, new { id = "over-view", length = "1000" })
+            @Html.ValidationMessageFor(model => model.OverView)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.YourSkills)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.YourSkills, new { id = "your-skills" })
+            @Html.ValidationMessageFor(model => model.YourSkills)
+        </div>
+
+        <p>
+            @Html.ActionLink(Internationalization.Resources.Back, "AddBasics", "Home") <input type="submit" value="@Internationalization.Resources.Create" />
+        </p>
+    </fieldset>
+}
+<script type="text/javascript">
+    function ajaxFileUpload() {
+        $("#loading")
+    .ajaxStart(function () {
+        $(this).show();
+    })
+    .ajaxComplete(function () {
+        $(this).hide();
+    });
+    $.ajaxFileUpload(
+        {
+            url: '/handler/AjaxuploadHandler.ashx',
+            secureuri: false,
+            fileElementId: 'fileToUpload',
+            dataType: 'json',
+            data: { name: 'logan', id: 'id' },
+            success: function (data, status) {
+                if (typeof (data.error) !== 'undefined') {
+                    if (data.error !== '') {
+                        alert(data.error);
+                    } else {
+                        $('#UserPhoto').attr("src", "/Temp/" + data.msg);
+                        $('#PhotoPathHidden').val(data.msg);
+                    }
+                }
+            },
+            error: function (data, status, e) {
+                alert(e);
+            }
+        }
+    )
+        return false;
+    }
+
+    $("input[type='submit']").click(function () {
+        var flag = true;
+        var MyRate = $("#MyRate").val();
+        if (!Globalize.parseFloat(MyRate)) {
+            $("#MyRate + span").text("@Internationalization.Resources.HourlyRateFailed").css({ color: "#e80c4d", "font-weight": "600", "font-size": "12px" }).show();
+            flag = false;
+        }
+
+        var SystemRate = $("#SystemRate").val();
+        if (!Globalize.parseFloat(SystemRate)) {
+            $("#SystemRate + span").text("@Internationalization.Resources.SystemRateFailed").css({ color: "#e80c4d", "font-weight": "600", "font-size": "12px" }).show();
+            flag = false;
+        }
+
+        return flag;
+    });
+
+    $(document).ready(function () {
+        $.validator.methods.number = function (value, element) {
+            if ($.global.parseFloat(value)) {
+                return true;
+            }
+
+            return false; 
+        }
+    });
+</script>

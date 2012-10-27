@@ -1,0 +1,214 @@
+﻿@model UI.ViewModels.WorkerInfo
+
+@{
+    ViewBag.Title = Internationalization.Resources.Index;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Internationalization.Resources.WorkerProfile</h2>
+
+<fieldset>
+    <legend>@Internationalization.Resources.Profile</legend>
+
+    <div class="display-label">@Html.LabelFor(model => model.WorkerBasic.FirstName)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WorkerBasic.FirstName)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.WorkerBasic.LastName)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WorkerBasic.LastName)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.WorkerBasic.Email)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WorkerBasic.Email)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.WorkerBasic.CountryID)</div>
+    <div class="display-field">
+        @ViewData["CountryName"]
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.WorkerBasic.UserName)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WorkerBasic.UserName)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.WorkerBasic.PassWord)</div>
+    <div class="display-field">
+        @ViewData["PassWord"]
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.WorkerBasic.AccountType)</div>
+    <div class="display-field">
+        @ViewData["AccountType"]
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.WorkerBasic.DisplayName)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.WorkerBasic.DisplayName)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.WorkerBasic.How)</div>
+    <div class="display-field">
+        @ViewData["HowHear"]
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>@Internationalization.Resources.WantJobType</legend>
+
+    @if (Model.JobList.WantList != null)
+    {
+        foreach (var TempParent in Model.JobList.WantList)
+        {
+            <div class="subject-main">
+                <div class="subject-parent-title">@TempParent.Name</div>
+                <div class="subject-clear"></div>
+                <div class="subject-sub">
+                    @foreach (var TempSub in TempParent.SubjectsList)
+                    {
+                        <div>@TempSub.Name</div>
+                    }
+                </div>
+            </div>
+        }
+    }
+
+    <div class="subject-clear"></div>
+</fieldset>
+
+<fieldset>
+        <legend>@Internationalization.Resources.BasicsInfo</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BasicsInfo.CountryId)
+        </div>
+        <div class="editor-field">
+            @ViewData["CountryInfo"]
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BasicsInfo.Address)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.BasicsInfo.Address)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BasicsInfo.Address2)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.BasicsInfo.Address2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BasicsInfo.City)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.BasicsInfo.City)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BasicsInfo.Province)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.BasicsInfo.Province)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BasicsInfo.PostalCode)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.BasicsInfo.PostalCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BasicsInfo.PhoneNumberId)
+        </div>
+        <div class="editor-field">
+            @ViewData["PhoneNumber"]
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BasicsInfo.AreaCode)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.BasicsInfo.AreaCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BasicsInfo.PhoneNumber)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.BasicsInfo.PhoneNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BasicsInfo.Ext)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.BasicsInfo.Ext)
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>@Internationalization.Resources.SkillsExperience</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SkillsInfo.PhotoPath)
+        </div>
+        <div class="editor-field">
+            @{
+                string temp = "";
+                if (Model != null && Model.SkillsInfo != null)
+                {
+                    temp = String.Format("~/Temp/{0}", Model.SkillsInfo.PhotoPath);
+                    temp = Url.Content(temp);
+                }
+                
+                <input type="image" alt="" id="UserPhoto" src="@temp"/>
+            }
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SkillsInfo.TagLine)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.SkillsInfo.TagLine, new { maxlength = "50" })
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SkillsInfo.MyRate)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.SkillsInfo.MyRate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SkillsInfo.SystemRate)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.SkillsInfo.SystemRate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SkillsInfo.OverView)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.SkillsInfo.OverView, new { id = "over-view", maxlength = "1000" })
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SkillsInfo.YourSkills)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.SkillsInfo.YourSkills, new { id = "your-skills" })
+        </div>
+
+    </fieldset>
+
+<p>
+    @Html.ActionLink(Internationalization.Resources.StartProfile, "AddBasics")
+</p>

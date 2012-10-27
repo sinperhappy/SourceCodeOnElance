@@ -1,0 +1,52 @@
+﻿@model UI.ViewModels.EmployerModel
+
+@{
+    ViewBag.Title = Internationalization.Resources.Index;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Internationalization.Resources.EmployerProfile</h2>
+
+<fieldset>
+    <legend>@Internationalization.Resources.Profile</legend>
+
+    <div class="display-label">@Html.LabelFor(model => model.FirstName)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.LastName)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.Email)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.CountryID)</div>
+    <div class="display-field">
+        @ViewData["CountryName"]
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.CompanyName)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompanyName)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.UserName)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.PassWord)</div>
+    <div class="display-field">
+        @ViewData["PassWord"]
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.How)</div>
+    <div class="display-field">
+        @ViewData["HowHear"]
+    </div>
+</fieldset>

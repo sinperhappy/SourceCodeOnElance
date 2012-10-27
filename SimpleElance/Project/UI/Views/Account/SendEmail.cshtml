@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = Internationalization.Resources.SendEmail;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+@Html.ValidationSummary(true)
+
+@if (Convert.ToInt32(ViewData["UserType"]) == 0)
+{
+    <p>@Html.ActionLink(Internationalization.Resources.Continue, "Welcome")</p>
+}  
+else
+{
+    <p>@Html.ActionLink(Internationalization.Resources.Continue, "WorkerIndex", "Home")</p>
+}     

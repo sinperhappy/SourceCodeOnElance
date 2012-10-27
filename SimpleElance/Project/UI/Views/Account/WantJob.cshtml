@@ -1,0 +1,80 @@
+﻿@model UI.ViewModels.WantJobList
+
+@{
+    ViewBag.Title = Internationalization.Resources.WantJob;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Internationalization.Resources.WantJobInfo1</h2>
+
+<p>@Internationalization.Resources.WantJobInfo2</p>
+
+@using (Html.BeginForm())
+{ 
+    @Html.ValidationSummary(true)
+    <p>@Html.CheckBox("CheckAll", false, new { id = "CheckAll", typeinfo = "All", valueid = "0", parent = "0" })@Internationalization.Resources.WantJobInfo3</p>
+    
+
+  if (Model.WantList != null)
+  {
+      foreach (var TempParent in Model.WantList)
+      {
+        <div class="subject-main">
+            <div class="subject-parent-title">@TempParent.Name</div>
+            <div class="subject-parent-check">@Internationalization.Resources.SelectALL @Html.CheckBox("CheckAll", false, new { id = TempParent.ID, typeinfo = "parent", value = TempParent.ID, valueid = TempParent.ID, parent = TempParent.ID, name = "subjects" })</div>
+            <div class="subject-clear"></div>
+            <div class="subject-sub">
+                @foreach (var TempSub in TempParent.SubjectsList)
+                {
+                    <div>@Html.CheckBox("CheckAll", false, new { id = TempSub.ID, typeinfo = "sub", value = TempSub.ID, valueid = TempSub.ID, parent = TempParent.ID, name = "subjects" })@TempSub.Name</div>
+                }
+            </div>
+        </div>
+      }
+  }
+
+    <div class="subject-clear"></div>
+    <input id="subject-select" type="hidden" name="subject-select" />
+    <p>
+        <input type="submit" value="@Internationalization.Resources.Continue" id="Continue" />
+    </p>
+}
+
+<script type="text/javascript">
+    $("input[type='checkbox']").click(
+            function () {
+                var typeinfo = $(this).attr("typeinfo");
+
+                if (typeinfo == "parent") {
+                    var valueid = $(this).attr("valueid");
+                    this.checked = !this.checked;
+
+                    $("input[parent='" + valueid + "']").each(function () {
+                        this.checked = !this.checked;
+                    });
+
+                    return;
+                }
+
+                if (typeinfo == "sub") {
+                    $(this).attr("checked", $(this).attr("checked"));
+                    return;
+                }
+
+                return;
+            }
+        );
+
+    $("#Continue").click(function () {
+        var SelectResult = "";
+
+        $("input[typeinfo != 'All']:checkbox").each(function () {
+            if (this.checked) {
+                SelectResult = SelectResult + $(this).attr("value") + ",";
+            }
+        });
+
+        $("#subject-select").val(SelectResult);
+    });
+
+</script>

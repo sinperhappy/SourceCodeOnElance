@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Über</value>
+  </data>
+  <data name="AboutInfo" xml:space="preserve">
+    <value>Dies ist eine Testaufgabe.</value>
+  </data>
+  <data name="AboutTask" xml:space="preserve">
+    <value>Zu diesem task</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Konto</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>Kontotyp</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="Address2" xml:space="preserve">
+    <value>Adresse2</value>
+  </data>
+  <data name="AddressRequired" xml:space="preserve">
+    <value>Adresse erforderlich.</value>
+  </data>
+  <data name="AdminSupport" xml:space="preserve">
+    <value>Admin Support</value>
+  </data>
+  <data name="Advertising" xml:space="preserve">
+    <value>Advertising</value>
+  </data>
+  <data name="ApplicationDevelopment" xml:space="preserve">
+    <value>Assistenz/Administration</value>
+  </data>
+  <data name="AreaCode" xml:space="preserve">
+    <value>Vorwahl</value>
+  </data>
+  <data name="ArticleWriting" xml:space="preserve">
+    <value>Artikelschreiben</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>&lt;&lt; Zurück</value>
+  </data>
+  <data name="BasicsInfo" xml:space="preserve">
+    <value>Grundlagen-Informationen</value>
+  </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="Business" xml:space="preserve">
+    <value>Business</value>
+  </data>
+  <data name="CheckUser" xml:space="preserve">
+    <value>Username existiert, bitte versuchen Sie einen anderen Benutzernamen.</value>
+  </data>
+  <data name="ChoseFile" xml:space="preserve">
+    <value>Bitte wählen Sie die Datei!</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Stadt</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Firma Name(optional)</value>
+  </data>
+  <data name="Conference" xml:space="preserve">
+    <value>Konferenz</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Weiter &gt;&gt;</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="CountryPhone" xml:space="preserve">
+    <value>Internationale Vorwahl</value>
+  </data>
+  <data name="Coworker" xml:space="preserve">
+    <value>Mitarbeiter</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Erstellen</value>
+  </data>
+  <data name="CreateAccount" xml:space="preserve">
+    <value>Konto erstellen</value>
+  </data>
+  <data name="CreateAccountInfo" xml:space="preserve">
+    <value>Hallo und herzlich Willkommen auf der Demo! Haben Sie bereits ein Konto?</value>
+  </data>
+  <data name="CreateBasics" xml:space="preserve">
+    <value>Grundlagen-Informationen erstellen</value>
+  </data>
+  <data name="CreateBasicsInfo1" xml:space="preserve">
+    <value>Erhalten, die Ihrem Profil gestartet!</value>
+  </data>
+  <data name="CreateBasicsInfo2" xml:space="preserve">
+    <value>Zuerst lassen Sie uns einige Grundlagen aus dem Weg...</value>
+  </data>
+  <data name="CreateEmployer" xml:space="preserve">
+    <value>Arbeitgeber Informationen erstellen</value>
+  </data>
+  <data name="CreateSkills" xml:space="preserve">
+    <value>Fähigkeiten Informationen erstellen</value>
+  </data>
+  <data name="CreateSkillsInfo1" xml:space="preserve">
+    <value>Erhalten, die Ihrem Profil gestartet!</value>
+  </data>
+  <data name="CreateSkillsInfo2" xml:space="preserve">
+    <value>Vermarkten Sie Ihre Fähigkeiten und Erfahrung...</value>
+  </data>
+  <data name="CreateWorker" xml:space="preserve">
+    <value>Worker erstellen</value>
+  </data>
+  <data name="CreateWorkerInfo1" xml:space="preserve">
+    <value>Ein Auftragnehmer-Konto erstellen</value>
+  </data>
+  <data name="CreateWorkerInfo2" xml:space="preserve">
+    <value>Möchten Sie mieten?</value>
+  </data>
+  <data name="CreateWorkerInfo3" xml:space="preserve">
+    <value>Arbeitgeber Informationen</value>
+  </data>
+  <data name="CreateWorkerInfo4" xml:space="preserve">
+    <value>Wie wollen Sie sich an Clients Aufgabe darstellen System zu veröffentlichen?</value>
+  </data>
+  <data name="DataEntry" xml:space="preserve">
+    <value>Dateneingabe</value>
+  </data>
+  <data name="DesignMultimedia" xml:space="preserve">
+    <value>Gestaltung&amp;Multimedia</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Anzeigenamen</value>
+  </data>
+  <data name="EbooksBlogs" xml:space="preserve">
+    <value>E-Bücher und Blogs</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-Mail-Adresse</value>
+  </data>
+  <data name="EmailFaield" xml:space="preserve">
+    <value>E-Mail-Adresse ist nicht korrekt.</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>E-Mail-Adresse erforderlich.</value>
+  </data>
+  <data name="EmployerInfo" xml:space="preserve">
+    <value>Arbeitgeber Informationen</value>
+  </data>
+  <data name="EmployerProfile" xml:space="preserve">
+    <value>Arbeitgeber-Profile</value>
+  </data>
+  <data name="Ext" xml:space="preserve">
+    <value>Ext</value>
+  </data>
+  <data name="Facebook" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Vorname</value>
+  </data>
+  <data name="FirstNameRequired" xml:space="preserve">
+    <value>Vorname erforderlich.</value>
+  </data>
+  <data name="Friend" xml:space="preserve">
+    <value>Freund</value>
+  </data>
+  <data name="GraphicDesign" xml:space="preserve">
+    <value>Grafik-Design</value>
+  </data>
+  <data name="HourlyRate" xml:space="preserve">
+    <value>Mein Stundensatz</value>
+  </data>
+  <data name="HourlyRateFailed" xml:space="preserve">
+    <value>Dieses Feld muss eine Zahl sein.</value>
+  </data>
+  <data name="HourlyRateRequired" xml:space="preserve">
+    <value>Mein Stundensatz erforderlich.</value>
+  </data>
+  <data name="How" xml:space="preserve">
+    <value>Wie sind Sie auf uns aufmerksam geworden?</value>
+  </data>
+  <data name="Illustration" xml:space="preserve">
+    <value>Abbildung</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="Individual" xml:space="preserve">
+    <value>Einzelperson</value>
+  </data>
+  <data name="ITProgramming" xml:space="preserve">
+    <value>IT- &amp; -Programmierung</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Nachname</value>
+  </data>
+  <data name="LastNameRequired" xml:space="preserve">
+    <value>Nachname erforderlich.</value>
+  </data>
+  <data name="LeadGeneration" xml:space="preserve">
+    <value>Lead-Generierung</value>
+  </data>
+  <data name="Linkedln" xml:space="preserve">
+    <value>Linkedln</value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Anmeldung fehlgeschlagen, bitte überprüfen Sie Benutzername und Passwort.</value>
+  </data>
+  <data name="LoginInfo" xml:space="preserve">
+    <value>Please input username and password. if you do not have an account,please</value>
+  </data>
+  <data name="Logoff" xml:space="preserve">
+    <value>Abmelden</value>
+  </data>
+  <data name="Logos" xml:space="preserve">
+    <value>Logos</value>
+  </data>
+  <data name="MobileApps" xml:space="preserve">
+    <value>Mobile Apps</value>
+  </data>
+  <data name="OnlineAdvertisement" xml:space="preserve">
+    <value>Online-Werbung</value>
+  </data>
+  <data name="OnlineNewsArticle" xml:space="preserve">
+    <value>Online News-Artikel</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Andere</value>
+  </data>
+  <data name="OverView" xml:space="preserve">
+    <value>Übersicht</value>
+  </data>
+  <data name="OverViewRequired" xml:space="preserve">
+    <value>Übersicht benötigt.</value>
+  </data>
+  <data name="PassWord" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="PassWordFaield" xml:space="preserve">
+    <value>Ihre Passwörter stimmen nicht überein.</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Kennwort ist erforderlich.</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Telefonnummer</value>
+  </data>
+  <data name="PhoneNumberField" xml:space="preserve">
+    <value>Dieses Feld muss eine Telefonnummer angegeben sein.</value>
+  </data>
+  <data name="Picture" xml:space="preserve">
+    <value>Ihre Picture(optional)</value>
+  </data>
+  <data name="PostJob" xml:space="preserve">
+    <value>Post einen Job</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>registrieren</value>
+  </data>
+  <data name="RegisterEmployer" xml:space="preserve">
+    <value>Als Client registrieren</value>
+  </data>
+  <data name="Relemarketing" xml:space="preserve">
+    <value>Relemarketing</value>
+  </data>
+  <data name="Research" xml:space="preserve">
+    <value>Forschung</value>
+  </data>
+  <data name="ResendEmail" xml:space="preserve">
+    <value>Überprüfungs-Email erneut senden</value>
+  </data>
+  <data name="RetypePassWord" xml:space="preserve">
+    <value>Passwort wiederholen</value>
+  </data>
+  <data name="RetypePassWordRequired" xml:space="preserve">
+    <value>Passwort erforderlich.</value>
+  </data>
+  <data name="SalesMarketing" xml:space="preserve">
+    <value>Sales&amp;Marketing</value>
+  </data>
+  <data name="SearchOnlineMarketing" xml:space="preserve">
+    <value>Verkauf- &amp; -Marketing</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>--Auswählen--</value>
+  </data>
+  <data name="SelectALL" xml:space="preserve">
+    <value>Wählen Sie alle</value>
+  </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>Senden Sie E-Mail</value>
+  </data>
+  <data name="SendEmailBody" xml:space="preserve">
+    <value>Willkommen bei Aufgabe veröffentlichen System!</value>
+  </data>
+  <data name="SendEmailFaield" xml:space="preserve">
+    <value>Warten Sie leider Fehler aufgetreten ist, bitte!</value>
+  </data>
+  <data name="SendEmailSubject" xml:space="preserve">
+    <value>Bitte überprüfen Sie Ihre E-mail-Adresse.</value>
+  </data>
+  <data name="SendEmailSuccess" xml:space="preserve">
+    <value>Wir sind bereits eine E-mail an Sie senden, überprüfen Sie es und bestätigen Sie Ihre E-mail-Adresse.</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Anmelden</value>
+  </data>
+  <data name="Skills" xml:space="preserve">
+    <value>Fähigkeiten</value>
+  </data>
+  <data name="SkillsExperience" xml:space="preserve">
+    <value>Fähigkeiten und Erfahrungen</value>
+  </data>
+  <data name="SkillsRequired" xml:space="preserve">
+    <value>Erforderlichen Fertigkeiten.</value>
+  </data>
+  <data name="SocialMediaSite" xml:space="preserve">
+    <value>Social-Media-Site</value>
+  </data>
+  <data name="StartProfile" xml:space="preserve">
+    <value>Starten Sie Ihr Profil</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Bundesland/Kanton</value>
+  </data>
+  <data name="SystemRate" xml:space="preserve">
+    <value>Welches System wird Kunden (außer System Gebühren) ändern.</value>
+  </data>
+  <data name="SystemRateFailed" xml:space="preserve">
+    <value>Dieses Feld muss eine Zahl sein.</value>
+  </data>
+  <data name="SystemRateRequired" xml:space="preserve">
+    <value>System Geschwindigkeit erforderlich.</value>
+  </data>
+  <data name="SystemTitle" xml:space="preserve">
+    <value>Aufgaben veröffentlichen system</value>
+  </data>
+  <data name="Tagline" xml:space="preserve">
+    <value>Tagline(optional)</value>
+  </data>
+  <data name="Transcription" xml:space="preserve">
+    <value>Transkription</value>
+  </data>
+  <data name="Translation" xml:space="preserve">
+    <value>Übersetzung</value>
+  </data>
+  <data name="TV" xml:space="preserve">
+    <value>TV/Radio/Print</value>
+  </data>
+  <data name="Twitter" xml:space="preserve">
+    <value>Twitter</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="UserNameMaxLength" xml:space="preserve">
+    <value>Weniger als 20 Zeichen muss sein.</value>
+  </data>
+  <data name="UserNameRequired" xml:space="preserve">
+    <value>Benutzername ist erforderlich.</value>
+  </data>
+  <data name="VerifyEmail" xml:space="preserve">
+    <value>E-Mail-Adresse verifizieren</value>
+  </data>
+  <data name="VerifyEmailInfo" xml:space="preserve">
+    <value>Sie sind fast fertig! Überprüfen Sie Ihre e-Mail.</value>
+  </data>
+  <data name="VerifyEmailInfo1" xml:space="preserve">
+    <value>Überprüfen Sie diesen Link in der e-Mail, die, der wir geschickt</value>
+  </data>
+  <data name="VerifyEmailInfo2" xml:space="preserve">
+    <value>um Ihr Konto zu vervollständigen</value>
+  </data>
+  <data name="VideographyEditing" xml:space="preserve">
+    <value>Videografie &amp; bearbeiten</value>
+  </data>
+  <data name="VirtualAssistant" xml:space="preserve">
+    <value>Virtuelle Assistentin</value>
+  </data>
+  <data name="WantHire" xml:space="preserve">
+    <value>Ich möchte mieten</value>
+  </data>
+  <data name="WantHireInfo" xml:space="preserve">
+    <value>Sofortiger Zugang zum Schwimmbad auf der Welt bewertet Auftragnehmern.</value>
+  </data>
+  <data name="WantJob" xml:space="preserve">
+    <value>Wollen Job</value>
+  </data>
+  <data name="WantJobInfo1" xml:space="preserve">
+    <value>Welche Art von Jobs wollen Sie?</value>
+  </data>
+  <data name="WantJobInfo2" xml:space="preserve">
+    <value>Wählen Sie unten eine Kategorie aus. Mach dir keine Sorgen, können Sie Ihre Kategorie zu ändern oder weitere Kategorien später hinzufügen, wenn nötig.</value>
+  </data>
+  <data name="WantJobInfo3" xml:space="preserve">
+    <value>Ja! Senden Sie mir neue Stellenanzeige in der ausgewählten Kategorie.</value>
+  </data>
+  <data name="WantJobType" xml:space="preserve">
+    <value>Auftragstypen gewünschte</value>
+  </data>
+  <data name="WantWork" xml:space="preserve">
+    <value>Ich möchte arbeiten</value>
+  </data>
+  <data name="WantWorkInfo" xml:space="preserve">
+    <value>Finden Sie Kunden, eingestellt wird, bezahlt</value>
+  </data>
+  <data name="WebContent" xml:space="preserve">
+    <value>Web-Inhalte</value>
+  </data>
+  <data name="WebDesign" xml:space="preserve">
+    <value>Web-Design</value>
+  </data>
+  <data name="WebProgramming" xml:space="preserve">
+    <value>Web-Programmierung</value>
+  </data>
+  <data name="WebSearchEngine" xml:space="preserve">
+    <value>Web-Suchmaschine</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Willkommen</value>
+  </data>
+  <data name="WelcomeInfo1" xml:space="preserve">
+    <value>Herzlichen Glückwunsch! Werden Sie jetzt registriert.</value>
+  </data>
+  <data name="WelcomeInfo2" xml:space="preserve">
+    <value>Post einen Job um Vorschläge zu erhalten und mieten Auftragnehmer auf Aufgabe veröffentlichen System.</value>
+  </data>
+  <data name="WorkerProfile" xml:space="preserve">
+    <value>Dieses Profil</value>
+  </data>
+  <data name="WritingTranslation" xml:space="preserve">
+    <value>Schreiben &amp; Übersetzung</value>
+  </data>
+  <data name="Zip" xml:space="preserve">
+    <value>PLZ/Ort</value>
+  </data>
+</root>

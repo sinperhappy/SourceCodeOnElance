@@ -1,0 +1,8 @@
+﻿@if(Session["UserLogin"] != null) {
+    var CurrentUser = (DAL.UserInfo)Session["UserLogin"];
+    <text>@Internationalization.Resources.Welcome <strong>@CurrentUser.UserName</strong>!
+    [ @Html.ActionLink(Internationalization.Resources.Logoff, "LogOff", "Account") ]</text>
+}
+else {
+    @:[ @Html.ActionLink(Internationalization.Resources.SignIn, "LogIn", "Account") ]
+}
