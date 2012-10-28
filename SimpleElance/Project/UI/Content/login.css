@@ -1,0 +1,150 @@
+﻿body 
+{
+    padding: 0px;
+    margin: 0px;
+	background-color:#FFFFFF;
+	font-size: 12px;
+	font-family: Lucida Grande, Verdana, Lucida Sans Regular, Lucida Sans Unicode, Arial, sans-serif, @宋体;
+}
+
+.login_form_main
+{
+	width: 459px;
+	height: 297px;
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	background-image: url("images/Login_Form.jpg");
+	position: relative;
+}
+
+.login_body
+{
+    background-color:#01277a;
+}
+
+.login_form_text
+{
+    width:459px;
+	height:20px;
+	text-align:center;
+	color:#ffffff;
+	font-weight:bold;
+	position:absolute;
+	top:120px;
+	right:0px;
+	font-size:14px;
+	line-height: 20px;
+}
+
+.login_form_line1
+{
+    width: 459px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 180px;
+    right: 0px;
+}
+
+.login_form_user
+{
+    width: 60px;
+    margin: 0px 10px 0px 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.login_form_line2
+{
+    width: 459px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 220px;
+    right: 0px;
+}
+
+.login_form_line3
+{
+    width: 459px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 260px;
+    right: 0px;
+}
+
+.login_form_password
+{
+    width: 80px;
+    margin: 0px 10px 0px 114px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.login_form_line3
+{
+    width: 459px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 260px;
+    right: 0px;
+}
+
+.l_f_i_name
+{
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    border-left: 1px solid #c4c4c4;
+    color: #777;
+    padding: 4px;
+    width: 170px
+}
+
+.l_f_i_password
+{
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    border-left: 1px solid #c4c4c4;
+    color: #777;
+    padding: 4px;
+    width: 170px
+}
+
+.l_f_i_login
+{
+    margin: 0px 0px 0px 168px;
+    padding: 0px;
+    width: 66px;
+	height: 25px;
+	border: none;
+	cursor: pointer;
+	background-image: url("images/Login_Form_6_bt.gif");
+}
+
+.empty_error_color
+{
+    color: Red;
+    font-size: 12px;
+}
+
+.i_f_i_login_insert
+{
+    margin: 0px 0px 0px 150px;
+    font-size: 13px;
+    color: #727171;
+    text-decoration: none;
+}
+
+.i_f_i_login_insert:hover
+{
+    color: #ba2636;
+    text-decoration: underline;
+}

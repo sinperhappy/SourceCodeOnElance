@@ -562,4 +562,19 @@
   <data name="Upload" xml:space="preserve">
     <value>Upload</value>
   </data>
+  <data name="LanguageManage" xml:space="preserve">
+    <value>LanguageManage</value>
+  </data>
+  <data name="LanguageAdd" xml:space="preserve">
+    <value>LanguageList</value>
+  </data>
+  <data name="LanguageList" xml:space="preserve">
+    <value>LanguageList</value>
+  </data>
+  <data name="ManageMainPage" xml:space="preserve">
+    <value>ManageMainPage</value>
+  </data>
+  <data name="ManagerProfile" xml:space="preserve">
+    <value>ManagerProfile</value>
+  </data>
 </root>

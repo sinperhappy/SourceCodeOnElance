@@ -1,0 +1,41 @@
+﻿@model UI.ViewModels.UserInfoModel
+@{
+    Layout = "~/Views/Shared/_ManageLayout.cshtml";
+}
+<div class="M_R_D_Length_1">
+    <div class="M_R_D_L_Header">
+        <span class="M_R_I_H_Title">
+            @Internationalization.Resources.ManagerProfile
+        </span>
+    </div>
+    <div class="M_R_T_Content">
+        <div class="M_R_T_C_line2">
+            <span class="M_R_T_C_l_XM">
+                @Html.LabelFor(model => model.FirstName)
+            </span><span class="M_R_T_C_line_text_color">
+                @Model.FirstName
+            </span>
+        </div>
+        <div class="M_R_T_C_line2">
+            <span class="M_R_T_C_l_XM">@Html.LabelFor(model => model.LastName) </span><span class="M_R_T_C_line_text_color">
+                @Model.LastName
+            </span>
+        </div>
+        <div class="M_R_T_C_line2">
+            <span class="M_R_T_C_l_XM">@Html.LabelFor(model => model.Email)</span> <span class="M_R_T_C_line_text_color">
+                @Model.Email
+            </span>
+        </div>
+        <div class="M_R_T_C_line2">
+            <span class="M_R_T_C_l_XM">@Html.LabelFor(model => model.CountryID) </span><span class="M_R_T_C_line_text_color">
+                @ViewData["CountryName"]
+            </span>
+        </div>
+        <div class="M_R_T_C_line2">
+            <span class="M_R_T_C_l_XM">@Html.LabelFor(model => model.CompanyName) </span><span
+                class="M_R_T_C_line_text_color">
+                @Model.CompanyName
+            </span>
+        </div>
+    </div>
+</div>

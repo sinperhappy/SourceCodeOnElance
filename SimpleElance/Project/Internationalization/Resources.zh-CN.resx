@@ -561,4 +561,19 @@
   <data name="Upload" xml:space="preserve">
     <value>上传</value>
   </data>
+  <data name="LanguageList" xml:space="preserve">
+    <value>语言列表</value>
+  </data>
+  <data name="ManagerProfile" xml:space="preserve">
+    <value>管理员信息</value>
+  </data>
+  <data name="LanguageAdd" xml:space="preserve">
+    <value>添加语言</value>
+  </data>
+  <data name="LanguageManage" xml:space="preserve">
+    <value>语言管理</value>
+  </data>
+  <data name="ManageMainPage" xml:space="preserve">
+    <value>管理首页</value>
+  </data>
 </root>
