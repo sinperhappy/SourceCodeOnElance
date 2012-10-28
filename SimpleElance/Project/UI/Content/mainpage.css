@@ -1,0 +1,295 @@
+﻿body 
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: @宋体;
+	background-color: #d1d1d1;
+	background-image: url("images/background.png");
+	background-repeat: repeat;
+	height: 100%;
+}
+/****************************************************************/
+#Mp_Header
+{
+	margin: 0px auto 0px auto;
+	padding: 40px 0px 0px 0px;
+	width: 1000px;
+	height: 40px;
+	/*background-color: #b0b0b0;
+	background-image: url(../images/header_background.png);*/
+	background-repeat: repeat-x;
+	position: relative;
+}
+
+#Mp_H_Account
+{
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	top: 10px;
+	right: 0px;
+}
+.Account_list
+{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.Account_list li
+{
+	display: block;
+	float: left;
+}
+.Account_Message,.Account_Name,.Account_PassWord
+{
+	border-right: 1px solid #a5a5a5;
+	font-size: 11px;
+	font-weight: 700;
+	padding: 5px 10px 5px 12px;
+	font-size:13px;
+}
+.Account_LogOut
+{
+	font-size: 11px;
+	font-weight: 700;
+	padding: 5px 0px 5px 6px;
+}
+.Account_Link:link,.Account_Link:visited
+{
+	color: #4e4e4e;
+	text-decoration: none;
+}
+.Account_Link:hover,.Account_LogOut:hover
+{
+	text-decoration:underline;
+	color: #376ea6;
+	cursor: pointer;
+}
+.Account_LogOut:link,.Account_LogOut:visited
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+#Mp_H_Menu
+{
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	height: 40px;
+	width: 1000px;
+	background-color: #b0b0b0;
+	background-image: url("images/colors/blue/header_inner.png");
+	background-repeat: repeat-x;
+	position: relative;
+}
+#Mp_H_Left
+{
+	width: 6px;
+	height: 6px;
+	background-image: url("images/colors/blue/header_inner_corners.png");
+	background-repeat:no-repeat;
+	background-position: 0px 0px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+#Mp_H_Right
+{
+	width: 6px;
+	height: 6px;
+	background-image: url("images/colors/blue/header_inner_corners.png");
+	background-repeat:no-repeat;
+	background-position: -6px 0px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+#Mp_H_M_Home
+{
+	margin: 0px;
+	padding: 0px;
+	height: 40px;
+	width: 146px;
+	float: left;
+}
+.Mp_H_M_H_Link
+{
+	margin: 0px;
+	padding: 0px;
+	height: 40px;
+	width: 46px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-image: url("images/colors/blue/button_home.png");
+	overflow: hidden;
+}
+.Mp_H_M_H_Link:link
+{
+	background-position: 0px 0px;
+}
+.Mp_H_M_H_Link:hover
+{
+	background-position: 0px -40px;
+}
+/****************************************************************/
+#Mp_Main
+{
+	margin: 0px auto 0px auto;
+	padding: 5px 0px 5px 0px;
+	width: 1000px;
+	height: 700px;
+	
+}
+/****************************************************************/
+#Mp_Left
+{
+	margin: 0px 5px 0px 0px;
+	padding: 0px;
+	width: 200px;
+	height: 700px;
+	float: left;
+}
+#M_L_Menu
+{
+	margin: 0px;
+	padding: 0px;
+	width: 200px;
+	height: auto;
+}
+#M_L_M_Products,#M_L_M_Events,#M_L_M_Settings,#M_L_M_PxMoney,#M_L_M_Links
+{
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+	width: 200px;
+	height: 90px;
+	cursor: pointer;
+}
+.M_L_M_Pages
+{
+    margin: 0px 0px 5px 0px;
+	padding: 0px;
+	width: 200px;
+	height: 90px;
+	cursor: pointer;
+}
+#M_L_M_DataPicker
+{
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+	width: 200px;
+	height:120px;
+	cursor: pointer;
+}
+#M_L_M_S_M_Info
+{
+    margin: 0px 0px 5px 0px;
+	padding: 0px;
+	width: 200px;
+	height:120px;
+	cursor: pointer;
+}
+.M_L_M_Left
+{
+	margin: 0px;
+	padding: 0px;
+	width: 6px;
+	height: 30px;
+	background-image: url("images/colors/blue/menu_l_selected.png");
+	background-repeat: no-repeat;
+	float: left;
+}
+.M_L_M_Content
+{
+	margin: 0px;
+	padding: 0px 0px 0px 10px;
+	width: 178px;
+	height: 30px;
+	color: #ffffff;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 30px;
+	background-image:url("images/colors/blue/menu_selected.png");
+	background-repeat: repeat-x;
+	float: left;
+}
+.M_L_M_Right
+{
+	margin: 0px;
+	padding: 0px;
+	width: 6px;
+	height: 30px;
+	background-image: url("images/colors/blue/menu_r_selected.png");
+	background-repeat: no-repeat;
+	float: left;
+}
+.M_L_M_Item1,.M_L_M_Item2
+{
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    height: 29px;
+    width: 180px;
+    line-height: 29px;
+    background-color: #376ea6;
+    color: #ffffff;
+    font-size: 12px;
+    border-bottom: 1px solid #326395;
+    background-image: url("images/colors/blue/menu_arrow.png");
+    background-repeat: no-repeat;
+    background-position: 5px 10px;
+}
+.left_link
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+.left_link:hover
+{
+    text-decoration: underline;
+}
+/****************************************************************/
+#Mp_right
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	width: 795px;
+	height: 700px;
+	float: left;
+}
+.Mp_Clear
+{
+	clear: both;
+}
+/****************************************************************/
+#Mp_footer
+{
+	margin: 0px auto 0px auto;
+	padding: 0px 0px 0px 0px;
+	width: 1000px;
+	height: 40px;
+	background-color: #2a2a2a;
+	text-align: right;
+	font-size: 12px;
+	color: #ffffff;
+	line-height: 40px;
+	text-align: center;
+}
+/****************************************************************/
+.MyCalendar .ajax__calendar_container {
+    border:1px solid #646464;
+    background-color: lemonchiffon;
+    color: red;
+}
+.MyCalendar .ajax__calendar_other .ajax__calendar_day,
+.MyCalendar .ajax__calendar_other .ajax__calendar_year {
+    color: black;
+}
+.MyCalendar .ajax__calendar_hover .ajax__calendar_day,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_month,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_year {
+    color: black;
+}
+.MyCalendar .ajax__calendar_active .ajax__calendar_day,
+.MyCalendar .ajax__calendar_active .ajax__calendar_month,
+.MyCalendar .ajax__calendar_active .ajax__calendar_year {
+    color: black;
+    font-weight:bold;
+}

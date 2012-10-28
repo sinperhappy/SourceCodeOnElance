@@ -1,0 +1,149 @@
+﻿@{
+    var Culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;    
+}
+@helper SelectedItem(string c, string culture)
+    {
+        if (c == culture)
+        {
+    @:selected="selected"
+    }
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>@ViewBag.Title</title>
+    <link href= "@Url.Content("~/Content/mainpage.css")" rel="stylesheet" type="text/css" />
+    <link href= "@Url.Content("~/Content/default.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.5.1.min.js")" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Mp_Header">
+        <div id="Mp_H_Logo">
+        </div>
+        <div id="Mp_H_Account">
+            <ul class="Account_list">
+                <li class="Account_Name">
+                </li>
+                <li class="Account_Message"><a href="javascript:" class="Account_Link"></a>
+                    <li class="Account_PassWord"><a class="Account_Link" href="/Manage/ChangePw">修改密码</a></li>
+                    <li class="Account_LogOut"><a class="Account_LogOut" href="/Manage/SignOut">安全退出</a></li>
+            </ul>
+        </div>
+        <div id="Mp_H_Menu">
+            <div id="Mp_H_M_Home">
+                <a href="/Manage/Index" class="Mp_H_M_H_Link"></a>
+            </div>
+            <div id="Mp_H_M_Menu">
+            </div>
+            <div id="Mp_H_Left">
+            </div>
+            <div id="Mp_H_Right">
+            </div>
+            <div class="Mp_Clear">
+            </div>
+        </div>
+    </div>
+    <div id="Mp_Main">
+        <div id="Mp_Left">
+            <div id="M_L_Menu">
+                @*<div class="M_L_M_Pages">
+					<div class="M_L_M_Left"></div>
+					<div class="M_L_M_Content">学生信息管理</div>
+					<div class="M_L_M_Right"></div>
+					<div class="Mp_Clear"></div>
+                    <div class="M_L_M_Item1"><a href="ViewStudent.aspx" class="left_link">信息查看</a></div>
+                    <div class="M_L_M_Item2"><a href="InsertStudent.aspx" class="left_link">信息添加</a></div>
+				</div>
+                <div class="M_L_M_Pages">
+					<div class="M_L_M_Left"></div>
+					<div class="M_L_M_Content">相册管理</div>
+					<div class="M_L_M_Right"></div>
+					<div class="Mp_Clear"></div>
+                    <div class="M_L_M_Item1"><a href="ViewPhoto.aspx" class="left_link">相册查看</a></div>
+                    <div class="M_L_M_Item2"><a href="InsertPhoto.aspx" class="left_link">相册添加</a></div>
+				</div>
+                <div class="M_L_M_Pages">
+					<div class="M_L_M_Left"></div>
+					<div class="M_L_M_Content">班级动态管理</div>
+					<div class="M_L_M_Right"></div>
+					<div class="Mp_Clear"></div>
+                    <div class="M_L_M_Item1"><a href="ViewNews.aspx" class="left_link">新闻查看</a></div>
+                    <div class="M_L_M_Item2"><a href="InsertNews.aspx" class="left_link">新闻添加</a></div>
+				</div>
+                <div id="M_L_M_PxMoney">
+					<div class="M_L_M_Left"></div>
+					<div class="M_L_M_Content">班级信息管理</div>
+					<div class="M_L_M_Right"></div>
+					<div class="Mp_Clear"></div>
+                    <div class="M_L_M_Item2"><a href="ViewClass.aspx" class="left_link">信息查看</a></div>
+                    <div class="M_L_M_Item2"><a href="InsertClass.aspx" class="left_link">信息添加</a></div>
+				</div>*@
+                <div id="M_L_M_Settings">
+                    <div class="M_L_M_Left">
+                    </div>
+                    <div class="M_L_M_Content">@Internationalization.Resources.LanguageManage</div>
+                    <div class="M_L_M_Right">
+                    </div>
+                    <div class="Mp_Clear">
+                    </div>
+                    <div class="M_L_M_Item1">
+                        <a href="/Manage/ViewManage" class="left_link">@Internationalization.Resources.LanguageList</a>
+                    </div>
+                    <div class="M_L_M_Item2">
+                        <a href="/Manage/AddLanguage" class="left_link">@Internationalization.Resources.LanguageAdd</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Mp_right">
+            @RenderBody()
+        </div>
+        <div class="Mp_Clear">
+        </div>
+    </div>
+    <div id="Mp_footer">
+        <span>Copyright © 2012-2012 Author sinper. All Rights Reserved.</span>
+        <div style="float:right; margin-right:20px;">
+                @Internationalization.Resources.Language
+                    @using (Html.BeginForm("Set", "SetCulture"))
+                    {
+                        Culture = Culture.ToLower();
+                        <select id="CultureList" name="CultureList">
+                            <option value="ar-sa" @SelectedItem("ar-sa", Culture)>Arabic</option>
+                            <option value="zh-cn" @SelectedItem("zh-cn", Culture)>Chinese</option>
+                            <option value="en-us" @SelectedItem("en-us", Culture)>English</option>
+                            <option value="fr-fr" @SelectedItem("fr-fr", Culture)>French</option>
+                            <option value="de-de" @SelectedItem("de-de", Culture)>German</option>
+                            <option value="he" @SelectedItem("he-il", Culture)>Hebrew</option>
+                            <option value="ru-ru" @SelectedItem("ru-ru", Culture)>Russian</option>
+                            <option value="es-es" @SelectedItem("es-es", Culture)>Spanish</option>
+                        </select>
+                    
+                                             string url = ViewContext.RouteData.Values["controller"].ToString() + "," + ViewContext.RouteData.Values["action"].ToString();
+                                             HttpCookie cookie = Request.Cookies["_url"];
+                                             if (cookie != null)
+                                             {
+                                                 cookie.Value = url;
+                                             }
+                                             else
+                                             {
+                                                 cookie = new HttpCookie("_url");
+                                                 cookie.HttpOnly = false; // Not accessible by JS.
+                                                 cookie.Value = url;
+                                                 cookie.Expires = DateTime.Now.AddYears(1);
+                                             }
+                                             Response.Cookies.Add(cookie);
+                    }
+                    <script type="text/javascript">
+                        $("#CultureList").change(function () {
+                            $(this).parents("form").submit();
+                        });
+                    </script>
+                    <div class="language-clear">
+                    </div>
+                    </div>
+    </div>
+    </form>
+</body>
+</html>
